@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm" name="myForm" class="input-container">
+            <label class="input-label" for="iteration-range">Choose iteration value</label>
+            <input name="iteration" class="input-range" id="iteration-range" type="range" min="0" max="4" step="1" value="0" oninput="iterationChanged(this.value)" onchange="iterationChanged(this.value)">   
+            
+            <label class="input-label" for="iteration-range">Choose line thickness</label>
+            <input name="thickness" class="input-range" id="iteration-range" type="range" min="0" max="5" step="1" value="2" oninput="thicknessChanged(myForm.elements.iteration.value, myForm.elements.thickness.value)" onchange="thicknessChanged(myForm.elements.iteration.value, myForm.elements.thickness.value)">
+
+            <label class="input-label" for="iteration-range">Choose line color</label>
+            <input name="color" class="input-range" id="iteration-range" type="color" value="#000000" onchange="colorChanged(myForm.elements.iteration.value, myForm.elements.thickness.value, myForm.elements.color.value)">
+    </form>
+    <script src="./script.js"></script>
+    <script src="./p5.min.js"></script>
+</body>
+</html>
